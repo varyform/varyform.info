@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- The site's ember and paper/night tokens (assets/css/_init.css): a favicon
+       is its own document, so the colours can't come from the CSS variables. -->
+  <style>
+    .tile { fill: oklch(0.55 0.15 40); }
+    .mark { stroke: oklch(0.985 0.004 85); }
+    @media (prefers-color-scheme: dark) {
+      .tile { fill: oklch(0.78 0.12 55); }
+      .mark { stroke: oklch(0.17 0.006 260); }
+    }
+  </style>
+  <rect class="tile" width="32" height="32" rx="8"/>
+  <path class="mark" d="M9 11.5 16 21.5 23 11.5" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
