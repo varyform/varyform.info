@@ -4,24 +4,24 @@ layout: default
 <section class="intro">
   <h1 class="intro__title">Hi, I'm Oleh.</h1>
   <p class="intro__lede">
-    I build web apps with Ruby on Rails, and tools for the editors and desktops I
-    use every day. This is where I write about them.
+    I build web apps with Ruby on Rails, and open-source tools that make working
+    on them nicer.
   </p>
 </section>
 
+{%- if site.posts.size > 0 %}
 <section class="section">
   <h2 class="section__title">Writing</h2>
   <ul class="post-list">
     {%- for post in site.posts limit: 5 %}
     {% include post-item.html post=post %}
-    {%- else %}
-    <li class="muted">Nothing here yet.</li>
     {%- endfor %}
   </ul>
   {%- if site.posts.size > 5 %}
   <p><a href="{{ '/blog/' | relative_url }}">All posts →</a></p>
   {%- endif %}
 </section>
+{%- endif %}
 
 <section class="section">
   <h2 class="section__title">Projects</h2>

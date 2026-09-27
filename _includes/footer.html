@@ -1,4 +1,6 @@
 <footer class="site-footer">
   <span>© {{ site.time | date: "%Y" }} {{ site.author.name }}</span>
+  {%- if site.posts.size > 0 %}
   <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+  {%- endif %}
 </footer>

@@ -9,3 +9,17 @@
       url: https://rori.varyform.info
     - label: rubygems
       url: https://rubygems.org/gems/rori
+
+- name: haml-lsp
+  url: https://github.com/varyform/haml-lsp
+  about: >-
+    A language server for HAML templates that brings ruby-lsp's hover,
+    go-to-definition and completion into your views, plus HAML and Ruby syntax
+    diagnostics. Ships with a Zed extension; works in any editor.
+
+- name: environment_gate
+  url: https://github.com/varyform/environment-gate
+  about: >-
+    One shared password in front of a whole Rack or Rails app, for staging,
+    demo and preview environments. Shareable unlock links, and messenger link
+    previews still work.
