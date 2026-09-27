@@ -1,0 +1,31 @@
+@layer components {
+  .post {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--gap) * 2);
+  }
+
+  .post__header {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--gap) * 0.5);
+  }
+
+  .post__title {
+    font-size: clamp(1.75rem, 1.3rem + 2.2vw, 2.5rem);
+    letter-spacing: -0.015em;
+  }
+
+  .post__meta {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--color-ink-muted);
+  }
+
+  .post__footer {
+    padding-block-start: var(--gap);
+    border-block-start: 1px solid var(--color-line);
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+  }
+}

@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<section class="intro">
+  <h1 class="intro__title">Hi, I'm Oleh.</h1>
+  <p class="intro__lede">
+    I build web apps with Ruby on Rails, and tools for the editors and desktops I
+    use every day. This is where I write about them.
+  </p>
+</section>
+
+<section class="section">
+  <h2 class="section__title">Writing</h2>
+  <ul class="post-list">
+    {%- for post in site.posts limit: 5 %}
+    {% include post-item.html post=post %}
+    {%- else %}
+    <li class="muted">Nothing here yet.</li>
+    {%- endfor %}
+  </ul>
+  {%- if site.posts.size > 5 %}
+  <p><a href="{{ '/blog/' | relative_url }}">All posts →</a></p>
+  {%- endif %}
+</section>
+
+<section class="section">
+  <h2 class="section__title">Projects</h2>
+  <ul class="project-list">
+    {%- for project in site.data.projects %}
+    <li class="project-list__item">
+      <a class="project-list__name" href="{{ project.url }}">{{ project.name }}</a>
+      <p class="project-list__about">{{ project.about }}</p>
+      {%- if project.links %}
+      <p class="project-list__links">
+        {%- for link in project.links %}
+        <a href="{{ link.url }}">{{ link.label }}</a>
+        {%- endfor %}
+      </p>
+      {%- endif %}
+    </li>
+    {%- endfor %}
+  </ul>
+</section>

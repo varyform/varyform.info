@@ -1,0 +1,11 @@
+# Listed on the home page, in this order.
+- name: rori
+  url: https://github.com/varyform/rori
+  about: >-
+    A niri-style tiling window manager for Rails apps: every page opens as a
+    window, driven by ⌘K, a terminal and the keyboard.
+  links:
+    - label: Live demo
+      url: https://rori.varyform.info
+    - label: rubygems
+      url: https://rubygems.org/gems/rori

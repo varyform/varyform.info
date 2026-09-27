@@ -1,0 +1,44 @@
+title: Oleh Khomei
+description: Notes on Ruby, Rails and the tools I build.
+url: https://varyform.info
+lang: en
+author:
+  name: Oleh Khomei
+  url: https://varyform.info
+github: varyform
+
+permalink: /blog/:title/
+
+defaults:
+  - scope:
+      type: posts
+    values:
+      layout: post
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+liquid:
+  error_mode: strict
+  strict_filters: true
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Jekyll skips underscore files; the tokens load first because "_" sorts
+# before lowercase names (see _includes/head.html).
+include:
+  - _init.css
+
+exclude:
+  - bin
+  - config
+  - Dockerfile
+  - Gemfile
+  - Gemfile.lock
+  - mise.toml
+  - vendor

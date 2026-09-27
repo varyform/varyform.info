@@ -1,0 +1,14 @@
+/.git/
+/.gitignore
+/.env*
+/.kamal/
+/.bundle/
+/vendor/
+/_site/
+/.jekyll-cache/
+/.jekyll-metadata
+/_drafts/
+/bin/
+/Dockerfile
+/.dockerignore
+.DS_Store

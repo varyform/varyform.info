@@ -1,0 +1,36 @@
+# The static site: Jekyll builds it into an nginx image (Dockerfile) that
+# kamal-proxy serves with Let's Encrypt. Server and hostname come from
+# .env.deploy (copy .env.deploy.example); variables already set in the shell
+# win. Then `bin/kamal setup` once and `bin/kamal deploy`.
+# Kamal doesn't read .env files itself, hence the explicit load; dotenv comes
+# with Kamal.
+<% require "dotenv"; Dotenv.load(".env.deploy") %>
+
+service: varyform-info
+image: varyform-info
+
+servers:
+  web:
+    - <%= ENV.fetch("SITE_SERVER") %>
+
+# www gets its own certificate and nginx redirects it to the apex
+# (config/nginx.conf).
+proxy:
+  ssl: true
+  hosts:
+    - <%= ENV.fetch("SITE_HOST") %>
+    - www.<%= ENV.fetch("SITE_HOST") %>
+  app_port: 80
+  healthcheck:
+    path: /up
+
+# Kamal's local registry, pushed to over SSH.
+registry:
+  server: localhost:5555
+
+builder:
+  arch: amd64
+
+aliases:
+  logs: app logs -f
+  shell: app exec --interactive --reuse "sh"

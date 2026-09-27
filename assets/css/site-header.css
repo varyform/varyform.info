@@ -1,0 +1,32 @@
+@layer components {
+  .site-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--gap);
+    font-family: var(--font-mono);
+    font-size: 0.9375rem;
+  }
+
+  .site-header__name {
+    color: var(--color-ink);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .site-header__nav {
+    display: flex;
+    gap: calc(var(--gap) * 1.25);
+
+    a {
+      color: var(--color-ink-muted);
+      text-decoration: none;
+    }
+
+    a:hover,
+    a[aria-current] {
+      color: var(--color-ink);
+    }
+  }
+}

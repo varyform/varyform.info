@@ -1,0 +1,14 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+{% seo %}
+{% feed_meta %}
+{%- comment -%}
+Every file in assets/css, in name order: _init.css (layers, tokens) first.
+?v= changes every build, so nginx can cache /assets/ for a year.
+{%- endcomment -%}
+{%- assign version = site.time | date: "%s" -%}
+{%- assign stylesheets = site.static_files | where_exp: "file", "file.path contains '/assets/css/'" | sort: "path" -%}
+{%- for file in stylesheets %}
+<link rel="stylesheet" href="{{ file.path | relative_url }}?v={{ version }}">
+{%- endfor %}

@@ -1,0 +1,7 @@
+<header class="site-header">
+  <a class="site-header__name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+  <nav class="site-header__nav">
+    <a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog/' %}aria-current="page" {% endif %}>Blog</a>
+    <a href="https://github.com/{{ site.github }}">GitHub</a>
+  </nav>
+</header>

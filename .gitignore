@@ -1,0 +1,10 @@
+/_site/
+/.jekyll-cache/
+/.jekyll-metadata
+/.bundle/
+/vendor/
+
+# Deploy settings (server, host); see .env.deploy.example.
+/.env*
+!/.env.deploy.example
+.DS_Store

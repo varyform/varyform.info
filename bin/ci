@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+# Production build that fails on bad front matter or Liquid errors.
+set -e
+JEKYLL_ENV=production bundle exec jekyll build --strict_front_matter "$@"

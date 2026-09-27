@@ -1,0 +1,60 @@
+/* Rouge token classes (kramdown wraps code blocks in .highlight). */
+@layer components {
+  .highlight {
+
+    .c,
+    .c1,
+    .cm,
+    .cs,
+    .cd {
+      color: var(--color-ink-muted);
+      font-style: italic;
+    }
+
+    .k,
+    .kd,
+    .kn,
+    .kp,
+    .kr,
+    .kc,
+    .nt {
+      color: var(--color-accent);
+    }
+
+    .s,
+    .s1,
+    .s2,
+    .sb,
+    .sd,
+    .sh,
+    .si,
+    .sx,
+    .ss,
+    .sr {
+      color: var(--color-success);
+    }
+
+    .m,
+    .mi,
+    .mf,
+    .mh,
+    .mo,
+    .kt,
+    .no {
+      color: var(--color-primary);
+    }
+
+    .nc,
+    .nn,
+    .nf,
+    .na,
+    .nb,
+    .bp {
+      color: var(--color-info);
+    }
+
+    .err {
+      color: inherit;
+    }
+  }
+}

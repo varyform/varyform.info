@@ -1,0 +1,2 @@
+[tools]
+ruby = "4.0.7" # keep in sync with .ruby-version (GitHub Actions)

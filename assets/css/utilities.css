@@ -1,0 +1,5 @@
+@layer utilities {
+  .muted {
+    color: var(--color-ink-muted);
+  }
+}

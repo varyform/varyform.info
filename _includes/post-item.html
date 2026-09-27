@@ -1,0 +1,5 @@
+<li class="post-list__item">
+  <a class="post-list__title" href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a>
+  <time class="post-list__date" datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%-d
+    %b %Y" }}</time>
+</li>
