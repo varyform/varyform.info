@@ -2,7 +2,7 @@
   // Fixture files that use ERB are not valid YAML until Rails renders them.
   "file_types": {
     "YAML+ERB": [
-      "**/*.yml"
+      "*.yml"
     ]
   },
   "lsp": {
