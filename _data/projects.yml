@@ -23,3 +23,11 @@
     One shared password in front of a whole Rack or Rails app, for staging,
     demo and preview environments. Shareable unlock links, and messenger link
     previews still work.
+
+- name: Mini Audition
+  url: https://mini-audition.com
+  about: >-
+    A small, fast audio editor for the Mac: zoom down to single samples,
+    record, arrange tracks on a multitrack with buses and effects, and
+    transcribe on device. Native Swift and Metal, free, no accounts or
+    tracking.
