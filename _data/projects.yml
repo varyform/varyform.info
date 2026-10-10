@@ -31,3 +31,13 @@
     record, arrange tracks on a multitrack with buses and effects, and
     transcribe on device. Native Swift and Metal, free, no accounts or
     tracking.
+
+- name: Re-Rebirth
+  url: https://github.com/varyform/re-rebirth
+  about: >-
+    A ReBirth RB-338 tribute in the browser: two acid bass lines, two drum
+    machines, a mixer and effects, all synthesized live with Web Audio. Opens
+    original ReBirth 2.0 songs.
+  links:
+    - label: Play it
+      url: https://rb.varyform.info
