@@ -41,3 +41,13 @@
   links:
     - label: Play it
       url: https://rb.varyform.info
+
+- name: NX Play
+  url: https://github.com/varyform/nx-native-wrapper
+  about: >-
+    A Mac app for your own Switch games, built on nxnative: one library to
+    build and play them natively on the Mac, install them on an iPhone or iPad,
+    and keep their saves in sync. Comes with a full-screen controller mode.
+  links:
+    - label: Download
+      url: https://github.com/varyform/nx-native-wrapper/releases/latest
