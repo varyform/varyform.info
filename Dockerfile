@@ -3,7 +3,7 @@
 
 # The site is plain files, so Jekyll runs on the build machine's own platform
 # (no emulation) and only the nginx stage targets the server's.
-ARG RUBY_VERSION=4.0.7
+ARG RUBY_VERSION=4.0.9
 FROM --platform=$BUILDPLATFORM docker.io/library/ruby:$RUBY_VERSION-slim AS build
 
 WORKDIR /site
