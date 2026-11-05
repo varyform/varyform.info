@@ -1,4 +1,20 @@
 # Listed on the home page, in this order.
+- name: Stickman's Fate
+  url: https://stickmans-fate.varyform.info
+  kind: Browser game
+  tone: accent
+  image: /assets/images/projects/stickmans-fate.webp
+  image_alt: A stickman lands an upside-down capoeira kick on a beach at sunset
+  about: >-
+    A 2D fighting game in the browser: six fighting styles, a story with two
+    endings, rollback online matches, and a Survival leaderboard that replays
+    every run to check its score. Free, with nothing to install.
+  links:
+    - label: Play it
+      url: https://stickmans-fate.varyform.info
+    - label: Read more
+      url: /blog/stickmans-fate/
+
 - name: Mini Audition
   url: https://mini-audition.com
   kind: Mac app
