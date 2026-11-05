@@ -52,6 +52,14 @@
       line-height: 1.55;
     }
 
+    iframe {
+      display: block;
+      inline-size: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      border-radius: var(--radius);
+    }
+
     img {
       border-radius: var(--radius);
     }

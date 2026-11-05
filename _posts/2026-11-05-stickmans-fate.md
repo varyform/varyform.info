@@ -14,7 +14,13 @@ or a touch screen.
 The idea and the direction are mine. Claude Opus 5.5 wrote the code and drew
 the graphics, and Suno V6 made the music.
 
-![Beija-Flor lands an upside-down capoeira kick on Duke, on a beach at sunset](/assets/images/stickmans-fate/beach.webp)
+<iframe
+  src="https://www.youtube-nocookie.com/embed/esVNi3jSqFw"
+  title="Stickman's Fate trailer"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+  loading="lazy"></iframe>
 
 ## Stick figures with real joints
 
@@ -23,6 +29,8 @@ Animations aren't sprites or stored joint angles: a pose says where the hands,
 feet and pelvis should go, and inverse kinematics works out the rest. That
 solve runs inside the game's simulation, so hitboxes follow the same bones you
 see on screen. A kick connects when the drawn foot gets there.
+
+![Beija-Flor lands an upside-down capoeira kick on Duke, on a beach at sunset](/assets/images/stickmans-fate/beach.webp)
 
 ## The same fight, to the last bit
 
