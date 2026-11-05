@@ -23,6 +23,8 @@ proxy:
   app_port: 80
   healthcheck:
     path: /up
+  logging:
+    request_headers: [Referer, Cache-Control, Last-Modified, User-Agent]
 
 # Kamal's local registry, pushed to over SSH.
 registry:
