@@ -5,7 +5,7 @@
   </head>
   <body>
     {% include header.html %}
-    <main class="page">
+    <main class="page{% if page.wide %} page--wide{% endif %}">
       {{ content }}
     </main>
     {% include footer.html %}

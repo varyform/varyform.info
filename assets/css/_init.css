@@ -11,10 +11,10 @@
     --brand-night-deep: oklch(0.21 0.008 260);
     --brand-graphite: oklch(0.25 0.01 260);
     --brand-chalk: oklch(0.92 0.006 85);
-    --brand-ember: light-dark(oklch(0.55 0.15 40), oklch(0.78 0.12 55));
+    --brand-ember: light-dark(oklch(0.55 0.18 38), oklch(0.79 0.16 58));
     --brand-sage: light-dark(oklch(0.5 0.09 150), oklch(0.78 0.08 150));
-    --brand-sky: light-dark(oklch(0.5 0.1 250), oklch(0.78 0.08 250));
-    --brand-plum: light-dark(oklch(0.5 0.12 320), oklch(0.78 0.09 320));
+    --brand-sky: light-dark(oklch(0.5 0.14 250), oklch(0.79 0.11 235));
+    --brand-plum: light-dark(oklch(0.5 0.18 320), oklch(0.77 0.14 325));
 
     --white: oklch(1 0 0);
     --black: oklch(0 0 0);
@@ -32,9 +32,12 @@
     --color-info: var(--brand-sky);
 
     --measure: 42rem;
+    --wide: 64rem;
     --gap: 1rem;
     --radius: 8px;
+    --radius-large: 16px;
 
+    --font-display: "Bricolage Grotesque", var(--font-sans);
     --font-sans: system-ui, -apple-system, "Segoe UI", Inter, sans-serif;
     --font-mono: ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
   }

@@ -2,20 +2,90 @@
   .project-list {
     display: flex;
     flex-direction: column;
-    gap: calc(var(--gap) * 1.25);
+    gap: calc(var(--gap) * 1.5);
     padding: 0;
     list-style: none;
   }
 
+  /* The whole card links to the project (see .project-list__name a::after). */
   .project-list__item {
+    --tone: var(--color-primary);
+
+    position: relative;
+    display: grid;
+    overflow: hidden;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-large);
+    background: var(--color-surface);
+    transition: border-color 0.2s;
+
+    &:hover,
+    &:focus-within {
+      border-color: var(--tone);
+    }
+
+    &:hover .project-list__image {
+      transform: scale(1.025);
+    }
+  }
+
+  .project-list__item--info {
+    --tone: var(--color-info);
+  }
+
+  .project-list__item--accent {
+    --tone: var(--color-accent);
+  }
+
+  .project-list__media {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+  }
+
+  .project-list__image {
+    position: absolute;
+    inset: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    object-position: left top;
+    transition: transform 0.4s;
+  }
+
+  .project-list__body {
     display: flex;
     flex-direction: column;
-    gap: calc(var(--gap) * 0.25);
+    gap: calc(var(--gap) * 0.75);
+    padding: calc(var(--gap) * 1.75);
+  }
+
+  .project-list__kind {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--tone);
   }
 
   .project-list__name {
-    font-family: var(--font-mono);
-    font-weight: 600;
+    font-size: clamp(1.75rem, 1.4rem + 1.5vw, 2.25rem);
+    letter-spacing: -0.02em;
+
+    a {
+      color: var(--color-ink);
+      text-decoration: none;
+    }
+
+    a::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+  }
+
+  .project-list__item:hover .project-list__name a {
+    color: var(--tone);
   }
 
   .project-list__about {
@@ -23,9 +93,57 @@
   }
 
   .project-list__links {
+    /* Above the card's stretched link. */
+    position: relative;
     display: flex;
-    gap: var(--gap);
+    flex-wrap: wrap;
+    gap: calc(var(--gap) * 0.5);
+    margin-block-start: auto;
+    padding-block-start: calc(var(--gap) * 0.5);
     font-family: var(--font-mono);
     font-size: 0.8125rem;
+
+    a {
+      padding: 0.35em 0.9em;
+      border: 1px solid color-mix(in oklch, var(--tone) 50%, transparent);
+      border-radius: 99px;
+      color: var(--tone);
+      text-decoration: none;
+    }
+
+    a:hover {
+      background: color-mix(in oklch, var(--tone) 14%, transparent);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .project-list__item {
+      grid-template-columns: 3fr 2fr;
+    }
+
+    .project-list__media {
+      aspect-ratio: auto;
+      min-block-size: 22rem;
+    }
+
+    .project-list__item:nth-child(even) {
+      grid-template-columns: 2fr 3fr;
+
+      .project-list__media {
+        order: 1;
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+
+    .project-list__item,
+    .project-list__image {
+      transition: none;
+    }
+
+    .project-list__item:hover .project-list__image {
+      transform: none;
+    }
   }
 }

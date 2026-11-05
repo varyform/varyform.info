@@ -1,6 +1,8 @@
 @layer base {
   html {
-    background: var(--color-canvas);
+    background:
+      radial-gradient(70rem 34rem at 50% -14rem, var(--color-primary-surface), transparent) no-repeat,
+      var(--color-canvas);
     color: var(--color-ink);
     font-family: var(--font-sans);
     font-size: 1.0625rem;
@@ -15,7 +17,9 @@
   h1,
   h2,
   h3 {
+    font-family: var(--font-display);
     line-height: 1.25;
+    letter-spacing: -0.015em;
     text-wrap: balance;
   }
 

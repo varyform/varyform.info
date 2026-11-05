@@ -1,9 +1,15 @@
 <header class="site-header">
-  <a class="site-header__name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+  <a class="site-header__name" href="{{ '/' | relative_url }}">
+    <svg class="site-header__mark" viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M2 16A14 14 0 0 1 16 2H30V16A14 14 0 0 1 16 30H2Z" />
+    </svg>
+    {{ site.title }}
+  </a>
   <nav class="site-header__nav">
     {%- if site.posts.size > 0 %}
     <a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog/' %}aria-current="page" {% endif %}>Blog</a>
     {%- endif %}
+    <a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}aria-current="page" {% endif %}>About</a>
     <a href="https://github.com/{{ site.github }}">GitHub</a>
   </nav>
 </header>

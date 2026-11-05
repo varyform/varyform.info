@@ -1,6 +1,10 @@
 # Listed on the home page, in this order.
 - name: Mini Audition
   url: https://mini-audition.com
+  kind: Mac app
+  tone: info
+  image: /assets/images/projects/mini-audition.webp
+  image_alt: Mini Audition's multitrack, with four lanes of waveforms and a mixer
   about: >-
     A small, fast audio editor for the Mac: zoom down to single samples,
     record, arrange tracks on a multitrack with buses and effects, and
@@ -9,6 +13,10 @@
 
 - name: Re-Rebirth
   url: https://github.com/varyform/re-rebirth
+  kind: Browser synth
+  tone: primary
+  image: /assets/images/projects/re-rebirth.webp
+  image_alt: Re-Rebirth's rack, with two bass lines, two drum machines and a mixer
   about: >-
     A ReBirth RB-338 tribute in the browser: two acid bass lines, two drum
     machines, a mixer and effects, all synthesized live with Web Audio. Opens
@@ -19,6 +27,10 @@
 
 - name: NX Play
   url: https://github.com/varyform/nx-native-wrapper
+  kind: Mac app
+  tone: accent
+  image: /assets/images/projects/nx-play.webp
+  image_alt: The NX Play library, a grid of game artwork
   about: >-
     A Mac app for your own Switch games, built on nxnative: one library to
     build and play them natively on the Mac, install them on an iPhone or iPad,
